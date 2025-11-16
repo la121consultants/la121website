@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LA121 Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">LA121</div>
+      <nav class="site-nav">
+        <a href="#mission">Mission</a>
+        <a href="#programs">Programs</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn admin-login" href="#admin-access">Admin Login</a>
+        <a class="btn super-admin-login" href="#admin-access">Super Admin</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <p class="kicker">Los Angeles Unified Local District 121</p>
+          <h1>Connecting schools, students, and families.</h1>
+          <p>
+            LA121 brings together educators, administrators, and community partners
+            to deliver equitable learning opportunities for every student in our
+            district.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#programs">Explore programs</a>
+            <a class="btn secondary" href="#contact">Partner with us</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Upcoming highlights</h2>
+          <ul>
+            <li>July 2 &mdash; Summer STEM kickoff</li>
+            <li>July 15 &mdash; Community resource fair</li>
+            <li>August 5 &mdash; Back-to-school readiness</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="mission" class="panel">
+        <div>
+          <h2>Our mission</h2>
+          <p>
+            We center students by supporting classroom innovation, wraparound
+            services, and strong school leadership so every learner feels seen,
+            supported, and empowered.
+          </p>
+        </div>
+      </section>
+
+      <section id="programs" class="panel grid">
+        <article>
+          <h3>Instructional support</h3>
+          <p>Professional learning, coaching, and data tools for educators.</p>
+        </article>
+        <article>
+          <h3>Family engagement</h3>
+          <p>Workshops, multilingual resources, and neighborhood partners.</p>
+        </article>
+        <article>
+          <h3>Student services</h3>
+          <p>Wellness, enrichment, and college-career readiness pathways.</p>
+        </article>
+      </section>
+
+      <section id="admin-access" class="panel admin-access">
+        <div class="access-card">
+          <h2>Administrator login</h2>
+          <p>District administrators can sign in to manage school programs.</p>
+          <form id="adminLoginForm" class="stacked-form">
+            <label class="form-group">
+              <span>Email</span>
+              <input type="email" id="adminEmail" placeholder="you@school.org" required />
+            </label>
+            <label class="form-group">
+              <span>Password</span>
+              <input type="password" id="adminPassword" placeholder="Enter password" required />
+            </label>
+            <button class="btn primary" type="submit">Admin Login</button>
+          </form>
+          <button class="link-button" id="forgotPassword">Forgot password?</button>
+          <p class="helper-text" id="forgotMessage" hidden></p>
+          <p class="helper-text" id="adminLoginFeedback" hidden></p>
+        </div>
+
+        <div class="access-card">
+          <div class="card-heading">
+            <h2>Super admin login</h2>
+            <span class="badge">Restricted</span>
+          </div>
+          <p>
+            Super admin access is limited to the LA121 consultants team lead. It unlocks
+            the ability to add and manage users across the platform.
+          </p>
+          <form id="superAdminForm" class="stacked-form">
+            <label class="form-group">
+              <span>Super admin email</span>
+              <input
+                type="email"
+                id="superAdminEmail"
+                placeholder="admin@la121consultants.co.uk"
+                required
+              />
+            </label>
+            <label class="form-group">
+              <span>Password</span>
+              <input type="password" id="superAdminPassword" placeholder="Enter password" required />
+            </label>
+            <button class="btn super-admin-login" type="submit">Super Admin Login</button>
+          </form>
+          <p class="helper-text error" id="superAdminError" hidden>
+            Only admin@la121consultants.co.uk can access the super admin tools.
+          </p>
+          <p class="helper-text success" id="superAdminStatus" hidden></p>
+
+          <div id="addUserPanel" class="add-user" hidden>
+            <h3>Add users</h3>
+            <p>
+              Enter the new team member's name and email to provision their account. Added
+              users appear in the list below for quick confirmation.
+            </p>
+            <form id="addUserForm" class="stacked-form">
+              <label class="form-group">
+                <span>Full name</span>
+                <input type="text" id="newUserName" placeholder="Jordan Lee" required />
+              </label>
+              <label class="form-group">
+                <span>Email</span>
+                <input type="email" id="newUserEmail" placeholder="jordan@example.org" required />
+              </label>
+              <button class="btn primary" type="submit">Add user</button>
+            </form>
+            <p class="helper-text" id="addUserFeedback" hidden></p>
+            <ul id="userList" class="user-list"></ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="panel">
+        <h2>Contact us</h2>
+        <p>Email <a href="mailto:hello@la121.org">hello@la121.org</a> for support.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      &copy; <span id="year"></span> LA121. All rights reserved.
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      const adminLoginForm = document.getElementById("adminLoginForm");
+      const adminLoginFeedback = document.getElementById("adminLoginFeedback");
+      const forgotPasswordButton = document.getElementById("forgotPassword");
+      const forgotMessage = document.getElementById("forgotMessage");
+      const adminEmailInput = document.getElementById("adminEmail");
+
+      adminLoginForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        adminLoginFeedback.textContent = "Credentials submitted securely.";
+        adminLoginFeedback.hidden = false;
+      });
+
+      forgotPasswordButton.addEventListener("click", () => {
+        const email = adminEmailInput.value.trim();
+        if (email) {
+          forgotMessage.textContent = `A secure reset link was sent to ${email}.`;
+        } else {
+          forgotMessage.textContent = "Enter your email above so we know where to send the reset link.";
+        }
+        forgotMessage.hidden = false;
+      });
+
+      const superAdminEmail = "admin@la121consultants.co.uk";
+      const superAdminForm = document.getElementById("superAdminForm");
+      const superAdminError = document.getElementById("superAdminError");
+      const superAdminStatus = document.getElementById("superAdminStatus");
+      const addUserPanel = document.getElementById("addUserPanel");
+      const addUserForm = document.getElementById("addUserForm");
+      const addUserFeedback = document.getElementById("addUserFeedback");
+      const userList = document.getElementById("userList");
+
+      superAdminForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const emailInput = document.getElementById("superAdminEmail").value.trim().toLowerCase();
+
+        if (emailInput === superAdminEmail) {
+          superAdminError.hidden = true;
+          superAdminStatus.textContent = "Super admin access granted. You can now add users.";
+          superAdminStatus.hidden = false;
+          addUserPanel.hidden = false;
+        } else {
+          superAdminStatus.hidden = true;
+          addUserPanel.hidden = true;
+          superAdminError.hidden = false;
+        }
+      });
+
+      addUserForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const name = document.getElementById("newUserName").value.trim();
+        const email = document.getElementById("newUserEmail").value.trim();
+
+        if (!name || !email) {
+          addUserFeedback.textContent = "Name and email are required.";
+          addUserFeedback.hidden = false;
+          return;
+        }
+
+        const listItem = document.createElement("li");
+        listItem.textContent = `${name} — ${email}`;
+        userList.prepend(listItem);
+
+        addUserFeedback.textContent = `${name} has been added.`;
+        addUserFeedback.hidden = false;
+        addUserForm.reset();
+      });
+    </script>
+  </body>
+</html>
