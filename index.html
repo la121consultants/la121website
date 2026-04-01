@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LA121 Consultants</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="logo">LA121</div>
+      <nav class="site-nav">
+        <a href="#home">Home</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Services <span class="caret" aria-hidden="true">&#8963;</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#cv-linkedin" role="menuitem">CV &amp; LinkedIn Support</a></li>
+            <li><a href="#interview-prep" role="menuitem">Interview Preparation</a></li>
+            <li><a href="#career-coaching" role="menuitem">Career Coaching</a></li>
+            <li><a href="#graduate-support" role="menuitem">Graduate Support</a></li>
+            <li><a href="#work-experience" role="menuitem">Work Experience</a></li>
+            <li><a href="#career-accelerator" role="menuitem">Career Accelerator Programme</a></li>
+            <li><a href="#website-building" role="menuitem">Website Building &mdash; From &pound;499</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Career Tools <span class="caret" aria-hidden="true">&#8964;</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#career-tools" role="menuitem">Resources</a></li>
+          </ul>
+        </div>
+
+        <a href="#jobs">Jobs</a>
+        <a href="#contact">Contact Us</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            About <span class="caret" aria-hidden="true">&#8964;</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#about" role="menuitem">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="header-actions">
+        <a class="btn icon-btn" href="#account" aria-label="Account">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a class="btn primary book-call" href="#contact">Book a Call</a>
+      </div>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div>
+          <p class="kicker">Career Consultants</p>
+          <h1>Unlock Your Career Potential</h1>
+          <p>
+            LA121 Consultants provides expert career guidance, CV support, interview
+            coaching, and work experience opportunities to help you land your dream role.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#services">Our Services</a>
+            <a class="btn secondary" href="#contact">Get in Touch</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#work-experience">Work Experience Opportunities</a></li>
+            <li><a href="#cv-linkedin">CV &amp; LinkedIn Support</a></li>
+            <li><a href="#interview-prep">Interview Preparation</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Services overview anchor -->
+      <div id="services"></div>
+
+      <section id="cv-linkedin" class="panel">
+        <h2>CV &amp; LinkedIn Support</h2>
+        <p>
+          Our experts will craft a standout CV and optimise your LinkedIn profile to
+          attract recruiters and hiring managers in your target industry.
+        </p>
+      </section>
+
+      <section id="interview-prep" class="panel">
+        <h2>Interview Preparation</h2>
+        <p>
+          Gain confidence with mock interviews, tailored feedback, and proven
+          techniques for tackling competency, technical, and situational questions.
+        </p>
+      </section>
+
+      <section id="career-coaching" class="panel">
+        <h2>Career Coaching</h2>
+        <p>
+          One-to-one coaching sessions designed to help you clarify your career goals,
+          build an actionable plan, and stay accountable throughout your journey.
+        </p>
+      </section>
+
+      <section id="graduate-support" class="panel">
+        <h2>Graduate Support</h2>
+        <p>
+          Tailored support for recent graduates navigating the job market for the first
+          time — from graduate scheme applications to assessment centres.
+        </p>
+      </section>
+
+      <section id="work-experience" class="panel work-experience-panel">
+        <h2>Work Experience</h2>
+        <p>
+          Gain real-world experience through our curated work experience placements.
+          Whether you are a student looking to build your CV or a career changer
+          exploring a new field, our placements give you the hands-on exposure
+          employers look for.
+        </p>
+        <div class="work-exp-grid">
+          <article>
+            <h3>Student Placements</h3>
+            <p>
+              Short-term placements for school and university students to explore
+              professional environments and develop workplace skills.
+            </p>
+          </article>
+          <article>
+            <h3>Career Changers</h3>
+            <p>
+              Structured placements for professionals transitioning into a new
+              sector, helping you build relevant experience quickly.
+            </p>
+          </article>
+          <article>
+            <h3>Shadowing &amp; Mentoring</h3>
+            <p>
+              Job shadowing and mentoring programmes paired with industry
+              professionals to guide your development and expand your network.
+            </p>
+          </article>
+        </div>
+        <a class="btn primary" href="#contact">Enquire About Work Experience</a>
+      </section>
+
+      <section id="career-accelerator" class="panel">
+        <h2>Career Accelerator Programme</h2>
+        <p>
+          An intensive programme combining CV workshops, interview coaching, networking
+          sessions, and employer introductions to fast-track your career progression.
+        </p>
+      </section>
+
+      <section id="website-building" class="panel">
+        <h2>Website Building &mdash; From &pound;499</h2>
+        <p>
+          Professional websites built for individuals and small businesses. Showcase
+          your personal brand or launch your business online with a clean, modern site.
+        </p>
+      </section>
+
+      <section id="career-tools" class="panel">
+        <h2>Career Tools</h2>
+        <p>
+          Access our library of templates, guides, and resources including CV
+          templates, cover letter examples, and salary negotiation guides.
+        </p>
+      </section>
+
+      <section id="jobs" class="panel">
+        <h2>Jobs</h2>
+        <p>
+          Browse curated job listings across industries. Our team hand-picks
+          opportunities that align with the roles our clients are targeting.
+        </p>
+      </section>
+
+      <section id="about" class="panel">
+        <h2>About Us</h2>
+        <p>
+          LA121 Consultants is a team of experienced career professionals dedicated
+          to helping individuals at every stage of their career journey — from
+          first job seekers to senior executives.
+        </p>
+      </section>
+
+      <section id="contact" class="panel">
+        <h2>Contact Us</h2>
+        <p>
+          Ready to take the next step? Get in touch to book a free discovery call
+          or find out more about any of our services.
+        </p>
+        <a class="btn primary" href="mailto:hello@la121consultants.co.uk">hello@la121consultants.co.uk</a>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      &copy; <span id="year"></span> LA121 Consultants. All rights reserved.
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Dropdown toggle behaviour
+      document.querySelectorAll(".nav-dropdown-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const isOpen = toggle.getAttribute("aria-expanded") === "true";
+          // Close all other open dropdowns first
+          document.querySelectorAll(".nav-dropdown-toggle[aria-expanded='true']").forEach((t) => {
+            if (t !== toggle) {
+              t.setAttribute("aria-expanded", "false");
+              t.closest(".nav-dropdown").classList.remove("open");
+            }
+          });
+          toggle.setAttribute("aria-expanded", String(!isOpen));
+          toggle.closest(".nav-dropdown").classList.toggle("open", !isOpen);
+        });
+      });
+
+      // Close dropdowns when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".nav-dropdown")) {
+          document.querySelectorAll(".nav-dropdown-toggle").forEach((t) => {
+            t.setAttribute("aria-expanded", "false");
+            t.closest(".nav-dropdown").classList.remove("open");
+          });
+        }
+      });
+
+      // Close dropdowns on Escape
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document.querySelectorAll(".nav-dropdown-toggle").forEach((t) => {
+            t.setAttribute("aria-expanded", "false");
+            t.closest(".nav-dropdown").classList.remove("open");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
