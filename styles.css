@@ -74,10 +74,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.3rem;
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: inherit;
+  text-decoration: none;
   font-weight: 600;
   font-size: 0.95rem;
   color: var(--secondary);
@@ -85,40 +82,39 @@ body {
   border-radius: 0.4rem;
   transition: background 0.15s;
   white-space: nowrap;
+  cursor: pointer;
 }
 
 .nav-dropdown-toggle:hover,
-.nav-dropdown.open .nav-dropdown-toggle {
+.nav-dropdown:hover .nav-dropdown-toggle,
+.nav-dropdown:focus-within .nav-dropdown-toggle {
   background: var(--bg);
 }
 
 .caret {
-  font-size: 0.7rem;
-  transition: transform 0.2s;
+  font-size: 0.75rem;
   display: inline-block;
-}
-
-.nav-dropdown.open .caret {
-  transform: rotate(180deg);
 }
 
 .dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 0.4rem);
+  top: calc(100% + 0.25rem);
   left: 0;
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   padding: 0.5rem 0;
-  min-width: 220px;
+  min-width: 230px;
   box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
   list-style: none;
   margin: 0;
   z-index: 200;
 }
 
-.nav-dropdown.open .dropdown-menu {
+/* Show on hover or keyboard focus within the parent */
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
   display: block;
 }
 

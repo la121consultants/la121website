@@ -19,9 +19,9 @@
         <a href="#home">Home</a>
 
         <div class="nav-dropdown">
-          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-            Services <span class="caret" aria-hidden="true">&#8963;</span>
-          </button>
+          <a href="#services" class="nav-dropdown-toggle" role="button" aria-haspopup="true">
+            Services <span class="caret" aria-hidden="true">&#x2303;</span>
+          </a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#cv-linkedin" role="menuitem">CV &amp; LinkedIn Support</a></li>
             <li><a href="#interview-prep" role="menuitem">Interview Preparation</a></li>
@@ -34,9 +34,9 @@
         </div>
 
         <div class="nav-dropdown">
-          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-            Career Tools <span class="caret" aria-hidden="true">&#8964;</span>
-          </button>
+          <a href="#career-tools" class="nav-dropdown-toggle" role="button" aria-haspopup="true">
+            Career Tools <span class="caret" aria-hidden="true">&#x2304;</span>
+          </a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#career-tools" role="menuitem">Resources</a></li>
           </ul>
@@ -46,9 +46,9 @@
         <a href="#contact">Contact Us</a>
 
         <div class="nav-dropdown">
-          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-            About <span class="caret" aria-hidden="true">&#8964;</span>
-          </button>
+          <a href="#about" class="nav-dropdown-toggle" role="button" aria-haspopup="true">
+            About <span class="caret" aria-hidden="true">&#x2304;</span>
+          </a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#about" role="menuitem">About Us</a></li>
           </ul>
@@ -212,42 +212,6 @@
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
-
-      // Dropdown toggle behaviour
-      document.querySelectorAll(".nav-dropdown-toggle").forEach((toggle) => {
-        toggle.addEventListener("click", () => {
-          const isOpen = toggle.getAttribute("aria-expanded") === "true";
-          // Close all other open dropdowns first
-          document.querySelectorAll(".nav-dropdown-toggle[aria-expanded='true']").forEach((t) => {
-            if (t !== toggle) {
-              t.setAttribute("aria-expanded", "false");
-              t.closest(".nav-dropdown").classList.remove("open");
-            }
-          });
-          toggle.setAttribute("aria-expanded", String(!isOpen));
-          toggle.closest(".nav-dropdown").classList.toggle("open", !isOpen);
-        });
-      });
-
-      // Close dropdowns when clicking outside
-      document.addEventListener("click", (e) => {
-        if (!e.target.closest(".nav-dropdown")) {
-          document.querySelectorAll(".nav-dropdown-toggle").forEach((t) => {
-            t.setAttribute("aria-expanded", "false");
-            t.closest(".nav-dropdown").classList.remove("open");
-          });
-        }
-      });
-
-      // Close dropdowns on Escape
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          document.querySelectorAll(".nav-dropdown-toggle").forEach((t) => {
-            t.setAttribute("aria-expanded", "false");
-            t.closest(".nav-dropdown").classList.remove("open");
-          });
-        }
-      });
     </script>
   </body>
 </html>
