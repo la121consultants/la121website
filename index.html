@@ -218,6 +218,7 @@
           </button>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#career-tools" role="menuitem">Resources</a></li>
+            <li><a href="#free-ebook" role="menuitem">Free Career eBook</a></li>
           </ul>
         </div>
 
@@ -529,6 +530,48 @@
         <a class="btn primary" href="#contact">Work With Us</a>
       </section>
 
+      <section id="free-ebook" class="panel ebook-panel" aria-labelledby="ebook-heading">
+        <div class="ebook-content">
+          <div class="ebook-text">
+            <span class="ebook-badge">Free Download</span>
+            <h2 id="ebook-heading">Free Career Guide eBook</h2>
+            <p>
+              Get our comprehensive career guide packed with expert tips on CV writing, interview techniques, LinkedIn optimisation, and navigating the UK job market — completely free.
+            </p>
+            <ul class="ebook-features">
+              <li>Proven CV frameworks used by top recruiters</li>
+              <li>Interview preparation strategies and sample answers</li>
+              <li>LinkedIn profile secrets to attract employers</li>
+              <li>Step-by-step job search action plan for the UK market</li>
+            </ul>
+          </div>
+          <div class="ebook-form-wrapper">
+            <form id="ebook-form" class="ebook-form" novalidate>
+              <h3>Get Your Free Copy</h3>
+              <p class="ebook-form-note">Enter your details to download instantly</p>
+              <div class="form-group">
+                <label for="ebook-email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="ebook-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+                <span class="field-error" id="email-error" role="alert"></span>
+              </div>
+              <div class="form-group">
+                <label for="ebook-phone">Phone Number <span aria-hidden="true">*</span></label>
+                <input type="tel" id="ebook-phone" name="phone" placeholder="+44 7700 900000" required autocomplete="tel" />
+                <span class="field-error" id="phone-error" role="alert"></span>
+              </div>
+              <button type="submit" class="btn primary ebook-submit">Download Free eBook</button>
+              <p class="ebook-privacy">We respect your privacy and will never share your details.</p>
+            </form>
+            <div id="ebook-success" class="ebook-success" hidden>
+              <div class="ebook-success-icon" aria-hidden="true">&#10003;</div>
+              <h3>Your download is starting!</h3>
+              <p>Thank you! Your free Career Guide eBook is on its way.</p>
+              <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1bdi2Iw6LJ4pi1v-gQZtQ0JwVoGws3V3m" target="_blank" rel="noopener noreferrer">Click here if the download did not start</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" class="panel" aria-labelledby="contact-heading">
         <h2 id="contact-heading">Contact Us</h2>
         <p>
@@ -581,6 +624,78 @@
           });
         }
       });
+
+      // eBook form
+      (function () {
+        var form = document.getElementById("ebook-form");
+        var successBox = document.getElementById("ebook-success");
+        var emailInput = document.getElementById("ebook-email");
+        var phoneInput = document.getElementById("ebook-phone");
+        var emailError = document.getElementById("email-error");
+        var phoneError = document.getElementById("phone-error");
+
+        function validateEmail(val) {
+          return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+        }
+
+        function validatePhone(val) {
+          return /^[\+\d][\d\s\-\(\)]{6,19}$/.test(val.trim());
+        }
+
+        function showError(input, errorEl, msg) {
+          input.classList.add("invalid");
+          errorEl.textContent = msg;
+        }
+
+        function clearError(input, errorEl) {
+          input.classList.remove("invalid");
+          errorEl.textContent = "";
+        }
+
+        emailInput.addEventListener("input", function () {
+          if (validateEmail(emailInput.value)) clearError(emailInput, emailError);
+        });
+
+        phoneInput.addEventListener("input", function () {
+          if (validatePhone(phoneInput.value)) clearError(phoneInput, phoneError);
+        });
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          var valid = true;
+
+          if (!validateEmail(emailInput.value)) {
+            showError(emailInput, emailError, "Please enter a valid email address.");
+            valid = false;
+          } else {
+            clearError(emailInput, emailError);
+          }
+
+          if (!validatePhone(phoneInput.value)) {
+            showError(phoneInput, phoneError, "Please enter a valid phone number.");
+            valid = false;
+          } else {
+            clearError(phoneInput, phoneError);
+          }
+
+          if (!valid) return;
+
+          // Trigger automatic download
+          var downloadUrl = "https://drive.google.com/uc?export=download&id=1bdi2Iw6LJ4pi1v-gQZtQ0JwVoGws3V3m";
+          var link = document.createElement("a");
+          link.href = downloadUrl;
+          link.setAttribute("download", "");
+          link.setAttribute("target", "_blank");
+          link.setAttribute("rel", "noopener noreferrer");
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          // Show success state
+          form.hidden = true;
+          successBox.hidden = false;
+        });
+      })();
 
       // FAQ accordion
       document.querySelectorAll(".faq-question").forEach((btn) => {
