@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Book Library | LA121 Consultants</title>
+    <meta name="description" content="Download our comprehensive career development guides and resources. Free and premium eBooks on CV writing, interview preparation, LinkedIn optimisation and more." />
+    <link rel="canonical" href="https://la121consultants.co.uk/ebooks" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GC182644T2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-GC182644T2');
+    </script>
+
+    <style>
+      :root {
+        --primary: #0060ff;
+        --accent: #f97316;
+        --secondary: #111827;
+        --text: #1f2933;
+        --muted: #6b7280;
+        --border: #e5e7eb;
+        --bg: #f5f6fa;
+        --card: #ffffff;
+        --navy: #0f1f3d;
+        font-size: 16px;
+      }
+
+      * { box-sizing: border-box; margin: 0; padding: 0; }
+
+      body {
+        font-family: "Inter", system-ui, sans-serif;
+        color: var(--text);
+        background: #fff;
+        line-height: 1.5;
+      }
+
+      /* ── Header ── */
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.85rem clamp(1.5rem, 5vw, 4rem);
+        background: #fff;
+        border-bottom: 1px solid var(--border);
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        gap: 1.5rem;
+      }
+
+      .logo-wrap {
+        display: flex;
+        align-items: center;
+        gap: 0.6rem;
+        text-decoration: none;
+        flex-shrink: 0;
+      }
+
+      .logo-icon {
+        width: 2.2rem;
+        height: 2.2rem;
+        background: var(--accent);
+        border-radius: 0.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 0.95rem;
+        letter-spacing: -0.02em;
+      }
+
+      .logo-text {
+        font-weight: 700;
+        font-size: 1.1rem;
+        color: var(--secondary);
+        letter-spacing: 0.02em;
+      }
+
+      /* ── Nav ── */
+      .site-nav {
+        display: flex;
+        align-items: center;
+        gap: 0.15rem;
+        flex-wrap: nowrap;
+      }
+
+      .site-nav > a {
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--secondary);
+        padding: 0.4rem 0.7rem;
+        border-radius: 0.4rem;
+        transition: background 0.15s;
+        white-space: nowrap;
+      }
+
+      .site-nav > a:hover,
+      .site-nav > a.active {
+        background: var(--bg);
+      }
+
+      /* Dropdown */
+      .nav-dropdown { position: relative; }
+
+      .nav-dropdown-toggle {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--secondary);
+        padding: 0.4rem 0.7rem;
+        border-radius: 0.4rem;
+        transition: background 0.15s;
+        white-space: nowrap;
+      }
+
+      .nav-dropdown-toggle:hover,
+      .nav-dropdown.open .nav-dropdown-toggle { background: var(--bg); }
+
+      .caret {
+        font-size: 0.65rem;
+        transition: transform 0.2s;
+        display: inline-block;
+        margin-top: 1px;
+      }
+
+      .nav-dropdown.open .caret { transform: rotate(180deg); }
+
+      .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: calc(100% + 0.4rem);
+        left: 0;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 0.75rem;
+        padding: 0.5rem 0;
+        min-width: 220px;
+        box-shadow: 0 8px 24px rgba(15,23,42,0.1);
+        list-style: none;
+        z-index: 200;
+      }
+
+      .nav-dropdown.open .dropdown-menu { display: block; }
+
+      .dropdown-menu li a {
+        display: block;
+        padding: 0.6rem 1.1rem;
+        text-decoration: none;
+        color: var(--text);
+        font-size: 0.875rem;
+        font-weight: 500;
+        transition: background 0.12s;
+      }
+
+      .dropdown-menu li a:hover { background: var(--bg); }
+
+      /* Header actions */
+      .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex-shrink: 0;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 0.5rem 1.3rem;
+        font-weight: 600;
+        font-size: 0.875rem;
+        text-decoration: none;
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.15s;
+        cursor: pointer;
+        border: none;
+        font-family: inherit;
+      }
+
+      .btn.primary {
+        background: var(--accent);
+        color: #fff;
+        box-shadow: 0 4px 14px rgba(249,115,22,0.3);
+      }
+
+      .btn.primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 6px 20px rgba(249,115,22,0.4);
+      }
+
+      .btn.outline {
+        background: transparent;
+        color: var(--secondary);
+        border: 1px solid var(--border);
+      }
+
+      .btn.outline:hover { background: var(--bg); }
+
+      .btn.icon-btn {
+        background: transparent;
+        color: var(--secondary);
+        padding: 0.4rem;
+        border-radius: 50%;
+        border: 1px solid var(--border);
+      }
+
+      .btn.icon-btn:hover { background: var(--bg); }
+
+      /* ── Hero / Page header ── */
+      .page-hero {
+        text-align: center;
+        padding: 4rem clamp(1.5rem, 5vw, 4rem) 2.5rem;
+        background: #fff;
+      }
+
+      .page-hero h1 {
+        font-size: clamp(2rem, 4vw, 3rem);
+        font-weight: 800;
+        color: var(--secondary);
+        margin-bottom: 0.75rem;
+        letter-spacing: -0.02em;
+      }
+
+      .page-hero p {
+        font-size: 1.05rem;
+        color: var(--muted);
+        max-width: 520px;
+        margin: 0 auto 2rem;
+      }
+
+      /* ── Tab filters ── */
+      .tab-bar {
+        display: inline-flex;
+        background: #f1f3f5;
+        border-radius: 999px;
+        padding: 0.3rem;
+        gap: 0.15rem;
+      }
+
+      .tab-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: var(--muted);
+        padding: 0.45rem 1.25rem;
+        border-radius: 999px;
+        transition: background 0.2s, color 0.2s;
+        white-space: nowrap;
+      }
+
+      .tab-btn.active {
+        background: #fff;
+        color: var(--secondary);
+        font-weight: 600;
+        box-shadow: 0 1px 4px rgba(15,23,42,0.1);
+      }
+
+      /* ── Library grid ── */
+      .library-section {
+        padding: 2rem clamp(1.5rem, 5vw, 4rem) 5rem;
+        background: #fff;
+      }
+
+      .ebooks-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.75rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+
+      /* ── eBook card ── */
+      .ebook-card {
+        border: 1px solid var(--border);
+        border-radius: 1rem;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 12px rgba(15,23,42,0.06);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .ebook-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 24px rgba(15,23,42,0.1);
+      }
+
+      .ebook-cover {
+        background: linear-gradient(135deg, #0060ff 0%, #0040bb 100%);
+        padding: 2.5rem 2rem;
+        text-align: center;
+        position: relative;
+      }
+
+      .ebook-cover-inner {
+        background: #fff;
+        border-radius: 0.5rem;
+        padding: 1.5rem 1.25rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        display: inline-block;
+        width: 100%;
+      }
+
+      .ebook-cover-inner .cover-logo {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        background: var(--accent);
+        border-radius: 0.3rem;
+        color: #fff;
+        font-weight: 800;
+        font-size: 0.8rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .ebook-cover-inner h3 {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--secondary);
+        line-height: 1.3;
+        margin: 0;
+      }
+
+      .ebook-badge {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: #22c55e;
+        color: #fff;
+        font-size: 0.7rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 0.2rem 0.6rem;
+        border-radius: 999px;
+      }
+
+      .ebook-badge.premium {
+        background: var(--accent);
+      }
+
+      .ebook-body {
+        padding: 1.25rem 1.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+      }
+
+      .ebook-body h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 0.5rem;
+      }
+
+      .ebook-body p {
+        font-size: 0.875rem;
+        color: var(--muted);
+        line-height: 1.55;
+        margin-bottom: 1.25rem;
+        flex: 1;
+      }
+
+      .ebook-card-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: auto;
+      }
+
+      .ebook-price {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #22c55e;
+      }
+
+      .ebook-price.paid {
+        color: var(--accent);
+      }
+
+      /* ── Lead capture modal ── */
+      .modal-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(15,23,42,0.55);
+        z-index: 500;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+      }
+
+      .modal-backdrop.open {
+        display: flex;
+      }
+
+      .modal {
+        background: #fff;
+        border-radius: 1.25rem;
+        padding: 2rem;
+        max-width: 460px;
+        width: 100%;
+        box-shadow: 0 20px 60px rgba(15,23,42,0.2);
+        position: relative;
+        animation: modalIn 0.2s ease;
+      }
+
+      @keyframes modalIn {
+        from { opacity: 0; transform: translateY(16px) scale(0.97); }
+        to   { opacity: 1; transform: translateY(0) scale(1); }
+      }
+
+      .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--muted);
+        font-size: 1.4rem;
+        line-height: 1;
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+        transition: color 0.15s;
+      }
+
+      .modal-close:hover { color: var(--secondary); }
+
+      .modal h2 {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--secondary);
+        margin-bottom: 0.35rem;
+      }
+
+      .modal-sub {
+        font-size: 0.875rem;
+        color: var(--muted);
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+      }
+
+      .form-group label {
+        font-size: 0.875rem;
+        font-weight: 600;
+        color: var(--secondary);
+        margin-bottom: 0.35rem;
+      }
+
+      .form-group label .req { color: var(--accent); }
+
+      .form-group input {
+        border: 1px solid var(--border);
+        border-radius: 0.5rem;
+        padding: 0.65rem 0.9rem;
+        font-family: inherit;
+        font-size: 0.95rem;
+        color: var(--text);
+        background: var(--bg);
+        transition: border-color 0.15s, box-shadow 0.15s;
+        outline: none;
+      }
+
+      .form-group input:focus {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(0,96,255,0.12);
+      }
+
+      .form-group input.invalid { border-color: #ef4444; }
+
+      .field-error {
+        font-size: 0.8rem;
+        color: #ef4444;
+        margin-top: 0.3rem;
+        min-height: 1em;
+      }
+
+      .modal-submit {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        margin-top: 0.25rem;
+        border-radius: 0.6rem;
+      }
+
+      .modal-privacy {
+        font-size: 0.75rem;
+        color: #9ca3af;
+        text-align: center;
+        margin-top: 0.75rem;
+      }
+
+      /* Success state */
+      .modal-success {
+        text-align: center;
+        padding: 0.5rem 0;
+      }
+
+      .success-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 3.5rem;
+        height: 3.5rem;
+        background: #22c55e;
+        color: #fff;
+        border-radius: 50%;
+        font-size: 1.75rem;
+        margin: 0 auto 1.25rem;
+      }
+
+      .modal-success h2 {
+        margin-bottom: 0.5rem;
+      }
+
+      .modal-success p {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .modal-success .btn {
+        border-radius: 0.6rem;
+        padding: 0.65rem 1.4rem;
+      }
+
+      /* Empty state */
+      .empty-state {
+        text-align: center;
+        padding: 4rem 1rem;
+        color: var(--muted);
+        grid-column: 1 / -1;
+      }
+
+      .empty-state p { font-size: 1rem; }
+
+      /* ── Footer ── */
+      .site-footer {
+        background: var(--navy);
+        color: #94a3b8;
+        padding: 3.5rem clamp(1.5rem, 5vw, 4rem) 1.5rem;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.5fr 1fr 1fr 1fr;
+        gap: 2.5rem;
+        margin-bottom: 3rem;
+      }
+
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .footer-brand { grid-column: 1 / -1; }
+      }
+
+      @media (max-width: 480px) {
+        .footer-grid { grid-template-columns: 1fr; }
+      }
+
+      .footer-brand .logo-wrap { margin-bottom: 1rem; }
+
+      .footer-brand .logo-text { color: #fff; }
+
+      .footer-brand p {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        max-width: 260px;
+      }
+
+      .footer-col h4 {
+        color: var(--accent);
+        font-size: 0.875rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        letter-spacing: 0.02em;
+      }
+
+      .footer-col ul {
+        list-style: none;
+      }
+
+      .footer-col ul li {
+        margin-bottom: 0.6rem;
+      }
+
+      .footer-col ul li a {
+        color: #94a3b8;
+        text-decoration: none;
+        font-size: 0.875rem;
+        transition: color 0.15s;
+      }
+
+      .footer-col ul li a:hover { color: #fff; }
+
+      .social-icons {
+        display: flex;
+        gap: 0.65rem;
+        margin-bottom: 1rem;
+      }
+
+      .social-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.25rem;
+        height: 2.25rem;
+        border-radius: 50%;
+        border: 1px solid rgba(255,255,255,0.15);
+        color: #94a3b8;
+        text-decoration: none;
+        transition: border-color 0.15s, color 0.15s, background 0.15s;
+      }
+
+      .social-btn:hover {
+        border-color: #fff;
+        color: #fff;
+        background: rgba(255,255,255,0.08);
+      }
+
+      .footer-contact {
+        font-size: 0.875rem;
+        line-height: 1.7;
+      }
+
+      .footer-contact a {
+        color: #94a3b8;
+        text-decoration: none;
+        transition: color 0.15s;
+      }
+
+      .footer-contact a:hover { color: #fff; }
+
+      .footer-bottom {
+        border-top: 1px solid rgba(255,255,255,0.08);
+        padding-top: 1.5rem;
+        text-align: center;
+        font-size: 0.8rem;
+      }
+
+      /* ── Responsive header ── */
+      @media (max-width: 900px) {
+        .site-nav { display: none; }
+      }
+
+      @media (max-width: 768px) {
+        .page-hero { padding: 3rem 1.5rem 2rem; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- ── Header ── -->
+    <header class="site-header">
+      <a href="/" class="logo-wrap" aria-label="LA121 Consultants home">
+        <div class="logo-icon">LA</div>
+        <span class="logo-text">LA121</span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="/">Home</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Services <span class="caret" aria-hidden="true">&#8964;</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/#cv-linkedin" role="menuitem">CV &amp; LinkedIn Support</a></li>
+            <li><a href="/#interview-prep" role="menuitem">Interview Preparation</a></li>
+            <li><a href="/#career-coaching" role="menuitem">Career Coaching</a></li>
+            <li><a href="/#graduate-support" role="menuitem">Graduate Support</a></li>
+            <li><a href="/#work-experience" role="menuitem">Work Experience</a></li>
+            <li><a href="/#career-accelerator" role="menuitem">Career Accelerator Programme</a></li>
+          </ul>
+        </div>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            Career Tools <span class="caret" aria-hidden="true">&#8964;</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/#career-tools" role="menuitem">Resources</a></li>
+            <li><a href="/ebooks" role="menuitem" class="active">E-Book Library</a></li>
+          </ul>
+        </div>
+
+        <a href="/#jobs">Jobs</a>
+        <a href="/#contact">Contact Us</a>
+
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+            About <span class="caret" aria-hidden="true">&#8964;</span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="/#about" role="menuitem">About Us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn icon-btn" href="/#account" aria-label="Account">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </a>
+        <a class="btn primary" href="/#contact">Book a Call</a>
+      </div>
+    </header>
+
+    <!-- ── Page Hero ── -->
+    <section class="page-hero" aria-labelledby="library-heading">
+      <h1 id="library-heading">E-Book Library</h1>
+      <p>Download our comprehensive career development guides and resources</p>
+      <div class="tab-bar" role="tablist" aria-label="Filter eBooks">
+        <button class="tab-btn active" role="tab" aria-selected="true" data-filter="all">All E-Books</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-filter="free">Free</button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-filter="premium">Premium</button>
+      </div>
+    </section>
+
+    <!-- ── eBook Grid ── -->
+    <section class="library-section" aria-label="eBook library">
+      <div class="ebooks-grid" id="ebooks-grid">
+
+        <!-- Free eBook card -->
+        <article class="ebook-card" data-category="free">
+          <div class="ebook-cover">
+            <span class="ebook-badge">Free</span>
+            <div class="ebook-cover-inner">
+              <div class="cover-logo">LA</div>
+              <h3>The Ultimate UK Career Guide</h3>
+            </div>
+          </div>
+          <div class="ebook-body">
+            <h4>The Ultimate UK Career Guide</h4>
+            <p>Packed with expert tips on CV writing, interview techniques, LinkedIn optimisation, and navigating the UK job market. Everything you need to land your next role.</p>
+            <div class="ebook-card-footer">
+              <span class="ebook-price">Free</span>
+              <button class="btn primary" onclick="openModal()">Download Free</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Empty state shown when no cards match filter -->
+        <div class="empty-state" id="empty-state" hidden>
+          <p>No eBooks in this category yet — check back soon.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── Lead Capture Modal ── -->
+    <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal" id="modal">
+        <button class="modal-close" onclick="closeModal()" aria-label="Close">&times;</button>
+
+        <!-- Form state -->
+        <div id="modal-form-state">
+          <h2 id="modal-title">Get Your Free eBook</h2>
+          <p class="modal-sub">Enter your details below to download instantly</p>
+
+          <form id="ebook-form" novalidate>
+            <div class="form-group">
+              <label for="ebook-email">Email Address <span class="req" aria-hidden="true">*</span></label>
+              <input type="email" id="ebook-email" name="email" placeholder="you@example.com" required autocomplete="email" />
+              <span class="field-error" id="email-error" role="alert"></span>
+            </div>
+            <div class="form-group">
+              <label for="ebook-phone">Phone Number <span class="req" aria-hidden="true">*</span></label>
+              <input type="tel" id="ebook-phone" name="phone" placeholder="+44 7700 900000" required autocomplete="tel" />
+              <span class="field-error" id="phone-error" role="alert"></span>
+            </div>
+            <button type="submit" class="btn primary modal-submit">Download Free eBook</button>
+            <p class="modal-privacy">We respect your privacy and will never share your details.</p>
+          </form>
+        </div>
+
+        <!-- Success state -->
+        <div id="modal-success-state" class="modal-success" hidden>
+          <div class="success-icon" aria-hidden="true">&#10003;</div>
+          <h2>Your download is starting!</h2>
+          <p>Thank you! Your free Career Guide eBook is on its way.</p>
+          <a class="btn primary" href="https://drive.google.com/uc?export=download&id=1bdi2Iw6LJ4pi1v-gQZtQ0JwVoGws3V3m" target="_blank" rel="noopener noreferrer">
+            Click here if the download did not start
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Footer ── -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo-wrap" aria-label="LA121 Consultants home">
+            <div class="logo-icon">LA</div>
+            <span class="logo-text">LA121</span>
+          </a>
+          <p>Empowering UK professionals with expert career coaching, professional CV writing, interview preparation, and ongoing job search support.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/#about">About</a></li>
+            <li><a href="/#services">Services</a></li>
+            <li><a href="/ebooks">E-Book Library</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/#cv-linkedin">CV &amp; LinkedIn</a></li>
+            <li><a href="/#interview-prep">Interview Prep</a></li>
+            <li><a href="/#career-coaching">Career Coaching</a></li>
+            <li><a href="/#career-accelerator">Career Accelerator</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <div class="social-icons">
+            <a href="https://www.linkedin.com/company/la121consultants" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://www.instagram.com/la121consultants" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@la121consultants" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+            </a>
+          </div>
+          <div class="footer-contact">
+            <a href="mailto:admin@la121consultants.co.uk">admin@la121consultants.co.uk</a><br />
+            <a href="https://whatsapp.com/channel/la121consultants" target="_blank" rel="noopener noreferrer">Join our WhatsApp Channel</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> LA121 Consultants. All rights reserved. Built with &#10084; by LA121 Consultants</p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // ── Dropdown toggles ──
+      document.querySelectorAll(".nav-dropdown-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+          const isOpen = toggle.getAttribute("aria-expanded") === "true";
+          document.querySelectorAll(".nav-dropdown-toggle[aria-expanded='true']").forEach((t) => {
+            if (t !== toggle) {
+              t.setAttribute("aria-expanded", "false");
+              t.closest(".nav-dropdown").classList.remove("open");
+            }
+          });
+          toggle.setAttribute("aria-expanded", String(!isOpen));
+          toggle.closest(".nav-dropdown").classList.toggle("open", !isOpen);
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".nav-dropdown")) {
+          document.querySelectorAll(".nav-dropdown-toggle").forEach((t) => {
+            t.setAttribute("aria-expanded", "false");
+            t.closest(".nav-dropdown").classList.remove("open");
+          });
+        }
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          document.querySelectorAll(".nav-dropdown-toggle").forEach((t) => {
+            t.setAttribute("aria-expanded", "false");
+            t.closest(".nav-dropdown").classList.remove("open");
+          });
+          closeModal();
+        }
+      });
+
+      // ── Tab filter ──
+      const cards = document.querySelectorAll(".ebook-card");
+      const emptyState = document.getElementById("empty-state");
+
+      document.querySelectorAll(".tab-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          document.querySelectorAll(".tab-btn").forEach((b) => {
+            b.classList.remove("active");
+            b.setAttribute("aria-selected", "false");
+          });
+          btn.classList.add("active");
+          btn.setAttribute("aria-selected", "true");
+
+          const filter = btn.dataset.filter;
+          let visible = 0;
+          cards.forEach((card) => {
+            const cat = card.dataset.category;
+            const show = filter === "all" || cat === filter;
+            card.hidden = !show;
+            if (show) visible++;
+          });
+          emptyState.hidden = visible > 0;
+        });
+      });
+
+      // ── Modal ──
+      const backdrop = document.getElementById("modal-backdrop");
+      const formState = document.getElementById("modal-form-state");
+      const successState = document.getElementById("modal-success-state");
+      const ebookForm = document.getElementById("ebook-form");
+      const emailInput = document.getElementById("ebook-email");
+      const phoneInput = document.getElementById("ebook-phone");
+      const emailError = document.getElementById("email-error");
+      const phoneError = document.getElementById("phone-error");
+
+      function openModal() {
+        // Reset to form state each time
+        formState.hidden = false;
+        successState.hidden = true;
+        ebookForm.reset();
+        [emailInput, phoneInput].forEach((i) => i.classList.remove("invalid"));
+        [emailError, phoneError].forEach((e) => (e.textContent = ""));
+        backdrop.classList.add("open");
+        emailInput.focus();
+      }
+
+      function closeModal() {
+        backdrop.classList.remove("open");
+      }
+
+      // Close on backdrop click
+      backdrop.addEventListener("click", (e) => {
+        if (e.target === backdrop) closeModal();
+      });
+
+      // Validation helpers
+      function validateEmail(val) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim());
+      }
+
+      function validatePhone(val) {
+        return /^[\+\d][\d\s\-\(\)]{6,19}$/.test(val.trim());
+      }
+
+      emailInput.addEventListener("input", () => {
+        if (validateEmail(emailInput.value)) {
+          emailInput.classList.remove("invalid");
+          emailError.textContent = "";
+        }
+      });
+
+      phoneInput.addEventListener("input", () => {
+        if (validatePhone(phoneInput.value)) {
+          phoneInput.classList.remove("invalid");
+          phoneError.textContent = "";
+        }
+      });
+
+      ebookForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let valid = true;
+
+        if (!validateEmail(emailInput.value)) {
+          emailInput.classList.add("invalid");
+          emailError.textContent = "Please enter a valid email address.";
+          valid = false;
+        } else {
+          emailInput.classList.remove("invalid");
+          emailError.textContent = "";
+        }
+
+        if (!validatePhone(phoneInput.value)) {
+          phoneInput.classList.add("invalid");
+          phoneError.textContent = "Please enter a valid phone number.";
+          valid = false;
+        } else {
+          phoneInput.classList.remove("invalid");
+          phoneError.textContent = "";
+        }
+
+        if (!valid) return;
+
+        // Trigger automatic download
+        const link = document.createElement("a");
+        link.href = "https://drive.google.com/uc?export=download&id=1bdi2Iw6LJ4pi1v-gQZtQ0JwVoGws3V3m";
+        link.setAttribute("target", "_blank");
+        link.setAttribute("rel", "noopener noreferrer");
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        // Show success
+        formState.hidden = true;
+        successState.hidden = false;
+      });
+    </script>
+  </body>
+</html>
