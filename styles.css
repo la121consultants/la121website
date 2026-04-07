@@ -299,6 +299,111 @@ main {
   color: #475569;
 }
 
+/* ── Service highlight lists ── */
+.service-highlights {
+  padding-left: 1.25rem;
+  margin: 1rem 0 1.5rem;
+  color: #475569;
+}
+
+.service-highlights li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+/* ── Features grid (Why Choose LA121) ── */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.feature-card {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  background: var(--bg);
+}
+
+.feature-card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+.feature-card p {
+  margin-bottom: 0;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+/* ── FAQ accordion ── */
+.faq-list {
+  margin-top: 1.5rem;
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--secondary);
+  text-align: left;
+  gap: 1rem;
+  transition: background 0.15s;
+}
+
+.faq-question:hover {
+  background: var(--bg);
+}
+
+.faq-icon {
+  font-size: 1.25rem;
+  font-weight: 400;
+  flex-shrink: 0;
+  transition: transform 0.2s;
+  color: var(--primary);
+}
+
+.faq-item.open .faq-icon {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 1.25rem 1rem;
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.faq-answer p {
+  margin: 0;
+}
+
+.faq-answer a {
+  color: var(--primary);
+}
+
+.faq-item.open .faq-answer {
+  display: block;
+}
+
 /* ── Footer ── */
 .site-footer {
   text-align: center;
