@@ -404,6 +404,63 @@ main {
   display: block;
 }
 
+/* ── eBook banner (homepage) ── */
+.ebook-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  background: linear-gradient(90deg, #0060ff 0%, #0040bb 100%);
+  border-radius: 1rem;
+  padding: 1.25rem 1.75rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.ebook-banner-text {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  color: #fff;
+}
+
+.ebook-banner-badge {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.65rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.ebook-banner-text strong {
+  font-size: 1rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.ebook-banner-text span {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.ebook-banner .btn.primary {
+  background: #fff;
+  color: #0060ff;
+  box-shadow: none;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ebook-banner .btn.primary:hover {
+  background: #f0f5ff;
+  box-shadow: none;
+}
+
 /* ── eBook section ── */
 .ebook-panel {
   border-left: 4px solid var(--primary);
